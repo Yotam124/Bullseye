@@ -23,4 +23,4 @@ This project has several departments:
    
    Test - A test class that contains proper checks of the game.
    
-   
+   authors: יותם דפנה, תומר חזן, מתיתיהו שטרן
