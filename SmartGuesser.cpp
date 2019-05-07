@@ -5,7 +5,6 @@ using namespace std;
 using namespace bullpgia;
 
 
-int wrong = 0;
 int pos = 0;
 int candidate = 0;
 string ans = "";
@@ -28,13 +27,13 @@ string SmartGuesser::guess() {
 void SmartGuesser::startNewGame(uint length){
 
 	this->length = length;
-	wrong = 0;
 	pos = 0;
 	candidate = 0;
 	ans = "wrong"; // wrong answer for sure.
-	ans = ans.substr(0,length);
+
+	ans = ans.substr(0,length); //Changes the length of the answer to the length declared in the game.
 }
-//}
+
 
 
 
