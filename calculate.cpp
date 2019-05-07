@@ -1,27 +1,41 @@
 #include <iostream>
 #include "calculate.hpp"
+#include <vector>
+
+
 
 using namespace std;
 
+
 string calculateBullAndPgia(string choice, string guess){
 	string ans = "";
-/*	int bulls = 0;
+	int bulls = 0;
 	int pgia = 0;
+	string newGuess = "";
+	string newChoice = "";
 
 	for (int i=0 ; i<choice.length() ; i++){
-		for (int j=0 ; j<choice.length() ; j++){
-			if (i == j){
-				if (guess[i] == choice[j]){
-					bulls++;
-				}
-			} else{
-				if (guess[i] == choice[j]){
-					pgia++;
-				}
+		if (guess[i] == choice[i]){
+			bulls++;
+		}else {
+			newGuess += guess[i];
+			newChoice += choice[i];
+		}
+	}
+
+	for (int i=0 ; i<newChoice.length() ; i++){
+		for (int j=0 ; j<newChoice.length() ; j++){
+			if (newGuess[i] == newChoice[j]){
+				pgia++;
+				newChoice.replace(j, 1, "A");
 			}
 		}
 	}
-	ans = bulls + "," + pgia;*/
+
+	ans = to_string(bulls) + "," + to_string(pgia);
 	return ans;
 
 }
+
+
+
