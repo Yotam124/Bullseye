@@ -13,24 +13,13 @@ string calculateBullAndPgia(string choice, string guess){
 	int pgia = 0;
 	string newGuess = "";
 	string newChoice = "";
-	if (choice.length() > guess.length()){
-		for (int i=0 ; i<choice.length() ; i++){
-			if (guess[i] == choice[i]){
-				bulls++;
-			}else {
-				newGuess += guess[i];
-				newChoice += choice[i];
-			}
-		}
-	}
-	else{
-		for (int i=0 ; i<guess.length() ; i++){
-			if (guess[i] == choice[i]){
-				bulls++;
-			}else {
-				newGuess += guess[i];
-				newChoice += choice[i];
-			}
+
+	for (int i=0 ; i<choice.length() ; i++){
+		if (guess[i] == choice[i]){
+			bulls++;
+		}else {
+			newGuess += guess[i];
+			newChoice += choice[i];
 		}
 	}
 
