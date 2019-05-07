@@ -10,17 +10,16 @@ int candidate = 0;
 string ans = "";
 
 void SmartGuesser::learn(string reply){
-	this->reply = reply;
-}
-
-string SmartGuesser::guess() {
-	int bulls = (int)(this->reply[0]);
+	int bulls = (int)(reply[0]);
 	if (bulls - 48 == (pos+1)){
 		pos++;
 		candidate = 0;
 	}
 	ans.replace(pos,1,to_string(candidate));
 	candidate++;
+}
+
+string SmartGuesser::guess() {
 	return ans;
 }
 

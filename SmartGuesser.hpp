@@ -7,7 +7,6 @@ namespace bullpgia{
 
 class SmartGuesser: public bullpgia::Guesser {
 public:
-	std::string reply = "";
 	uint length = 0;
 
 	string guess() override;
